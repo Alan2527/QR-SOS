@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil Digital | Link in Bio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* 1. VARIABLES Y RESET */
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --primary-color: #ffffff;
+            --accent-color: #6366f1; /* Color de los iconos/detalles */
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Quita el flash azul en móviles */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* 2. CONTENEDOR PRINCIPAL (Limitado a ancho móvil) */
+        .wrapper {
+            width: 100%;
+            max-width: 450px; /* Tamaño máximo para que se vea como móvil en PC */
+            text-align: center;
+        }
+
+        /* 3. CABECERA (Foto y Bio) */
+        header {
+            margin-bottom: 32px;
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: var(--shadow);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        /* 4. BOTONES / ENLACES */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            background-color: var(--primary-color);
+            padding: 18px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        /* Efectos de interacción */
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .link-card:active {
+            transform: scale(0.97); /* Efecto de hundimiento al tocar */
+        }
+
+        .link-card i {
+            position: absolute;
+            left: 20px;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        /* 5. REDES SOCIALES (Iconos inferiores) */
+        .social-icons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .social-icons a {
+            color: #94a3b8;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        /* 6. FOOTER */
+        footer {
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Tu Foto" class="avatar">
+            <h1>@usuario_pro</h1>
+            <p class="bio">Digital Creator | Ayudando a marcas a crecer en el mundo digital 🚀</p>
+        </header>
+
+        <main class="links-container">
+            <a href="#" class="link-card" target="_blank">
+                <i class="fas fa-globe"></i>
+                Visita mi Web
+            </a>
+            <a href="#" class="link-card" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Hablemos por WhatsApp
+            </a>
+            <a href="#" class="link-card" target="_blank">
+                <i class="fas fa-shopping-cart"></i>
+                Mi Tienda Online
+            </a>
+            <a href="#" class="link-card" target="_blank">
+                <i class="fas fa-envelope"></i>
+                Suscríbete al Newsletter
+            </a>
+        </main>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <footer>
+            Hecho con ✨ por TuNombre
+        </footer>
+    </div>
+
+</body>
+</html>
